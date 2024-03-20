@@ -52,11 +52,12 @@ nav {
 }
 .menu-nav li a {
     color: white;
-    text-decoration: underline orangered;
     font-size: 40px;
-    
+    text-decoration: none;
 }
-
+.menu-nav li:hover {
+    text-decoration: underline orangered;
+}
 
 h1 {
 margin-top: 70px;
@@ -106,12 +107,15 @@ margin-top: 70px;
     border-radius: 10px;
     
 }
-
+  
 .news-box h3 a {
     color: white;
-    text-decoration: underline orangered;
+    text-decoration:none ;
     
 }
+.news-box h3 :hover{
+    text-decoration: underline orangered;    
+    }   
 .trailer-wish button a {
     color: white;          
 }
@@ -163,7 +167,7 @@ footer {
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 80%;
+    width: 50%;
     height: 500px;
     background-color: #363b85; 
     border-radius: 10px;
@@ -216,8 +220,11 @@ footer {
 
 .about-box h3 a {
     color: white;
-    text-decoration: underline orangered;
+    text-decoration: none;
     
+}
+.about-box h3 :hover {
+    text-decoration: underline orangered;
 }
 .beta-title {
         text-align: center;
@@ -225,37 +232,82 @@ footer {
         margin-bottom: 10px;
 
 }
-.beta-form {
+.beta-section {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left:  15%;
-    justify-content: space-around;
-    width: 70%;
-    background-color: #363b85;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px 3px #f75d05;
-    padding: 20px; 
-    box-sizing: border-box; 
-}
-
-.beta-field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-
-
-input {
+    justify-content: center;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 50px;
+
+}
+.beta-grid {
+    display: grid;
+    width: 100%;
+    height: 60%;
+    margin-bottom: 50px;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: 60px 250px 250px 250px;
+    
+
+}
+.beta-section div {
+    width: 90%;
+    background-color: #363b85; 
+    border-radius: 10px;
+    gap: 5px;
+
+}
+.steam {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    border-radius: 15px;
+
 }
 
+.xbox {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    border-radius: 15px;
+
+}
+.ps-store {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    border-radius: 15px;
+
+}
+.epic {
+    width: 100%;
+    height: 100%;
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    border-radius: 15px;
+
+}
+.switch{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+.beta-grid h2 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    
+}
+.beta-grid img{
+    filter: grayscale(1);
+}
+.beta-grid img:hover {
+    filter: none;
+    border: 3px solid orangered;
+}
 @media(max-width:860px){
     body{
         font-size: 20px;
@@ -310,8 +362,49 @@ input {
         font-size: 10px;
         
     }
+    .steam {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        border-radius: 15px;
     
+    }
+    
+    .xbox {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        border-radius: 15px;
+    
+    }
+    .ps-store {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+        border-radius: 15px;
+    
+    }
+    .epic {
+        width: 100%;
+        height: 100%;
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+        border-radius: 15px;
+    
+    }
+    .switch{
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+        border-radius: 15px;
+    
+    }
 }
+
 @media(max-width:611px){
     .menu-nav {
         display: flex;
@@ -369,12 +462,7 @@ button {
     height: 50%;
 
     }
-.beta-title {
-    font-size: 25px;
-}
-.beta-form {
-    font-size: 15px;
-}
+
 footer {
 
     font-size: 10px;
