@@ -1,0 +1,29 @@
+h1 {
+    margin-top: 70px;
+    text-align: center; }
+.description {
+    text-align: center; }.description-text 
+    {
+    margin-left: 50px;
+    align-content: center; 
+    }
+.trailer-wish{
+    li {
+        display: inline-block; 
+        }   
+    button {
+        width: 120px;
+        height: 50px;
+        background-color: orangered;
+        align-items: center;
+        margin-top: 70px;
+        margin-left: 70px;
+        color: white;
+        font-family: "Anta", sans-serif;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px 3px #222222;
+        }
+    button a {
+        color: white; 
+        }
+}
