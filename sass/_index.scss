@@ -24,6 +24,6 @@ h1 {
         box-shadow: 3px 3px 3px 3px #222222;
         }
     button a {
-        color: white; 
+        color: map-get($colores, letras);
         }
 }
