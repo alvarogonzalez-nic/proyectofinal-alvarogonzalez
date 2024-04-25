@@ -32,6 +32,6 @@
             text-decoration: none; 
         }
         h3 :hover {
-            text-decoration: map-get($colores, underline );
+            text-decoration: underline map-get($colores, underline );
     }
 }
